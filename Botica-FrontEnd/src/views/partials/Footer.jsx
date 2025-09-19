@@ -1,21 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
     <div className="footer">
       <div className="footer-section">
         <h4>Accesos directos</h4>
-        <a href="#">Inicio</a>
-        <a href="#">Catálogo</a>
-        <a href="#">Promociones</a>
-        <a href="#">Iniciar sesión</a>
+        <Link to="/login">Inicio</Link>
+        <Link to="/catalogo">Catálogo</Link>
+        <Link to="/promociones">Promociones</Link>
+        <Link to="/login">Iniciar sesión</Link>
       </div>
       <div className="footer-section">
         <h4>Contáctanos</h4>
         <p>Teléfono: (01) 456 7890</p>
         <p>WhatsApp: +51 987 654 321</p>
         <p>Correo: contacto@ecosalud.pe</p>
-        <a href="#">¿Alguna consulta rápida? Te invitamos a usar nuestro chatbot</a>
+        <Link to="/login">¿Alguna consulta rápida? Te invitamos a usar nuestro chatbot</Link>
       </div>
       <div className="footer-section">
         <div className="footer-logo">

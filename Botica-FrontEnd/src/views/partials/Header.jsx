@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SearchIcon = () => (
   <svg 
@@ -26,7 +27,9 @@ function Header({
   return (
     <div className="header">
       <div className="logo">
-        <img className="logo-img" src="/assets/Logodef.png" alt="EcoSalud" />
+        <Link to="/" aria-label="Ir al inicio">
+          <img className="logo-img" src="/assets/Logodef.png" alt="EcoSalud" />
+        </Link>
       </div>
 
       <div className="search-center">
@@ -45,10 +48,10 @@ function Header({
       </div>
 
       <nav className="nav-menu">
-        <a href="#" className="nav-link">Inicio</a>
-        <a href="#" className="nav-link">Catálogo</a>
-        <a href="#" className="nav-link">Promociones</a>
-        <a href="#" className="login-btn">Iniciar sesión</a>
+        <Link to="/" className="nav-link">Inicio</Link>
+        <Link to="/catalogo" className="nav-link">Catálogo</Link>
+        <Link to="/promociones" className="nav-link">Promociones</Link>
+        <Link to="/login" className="login-btn">Iniciar sesión</Link>
       </nav>
     </div>
   );
