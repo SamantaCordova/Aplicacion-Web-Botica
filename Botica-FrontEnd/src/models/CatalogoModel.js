@@ -1,0 +1,8 @@
+export const initialProducts = [
+    { id: 1, name: 'Paracetamol 500 mg - Genérico', price: 'S/.5.00', src: '/assets/paracetamol-generico.JPG', presentation: 'Tableta', description: 'Analgésico y antipirético de uso común para aliviar dolores leves a moderados y reducir la fiebre. Presentación en tabletas de 500 mg.' },
+    { id: 2, name: 'Paracetamol 500mg - Tylenol', price: 'S/.22.00', src: '/assets/tylenol.JPG', presentation: 'Tableta', description: 'Paracetamol de marca Tylenol en tabletas de 500 mg, indicado para dolor y fiebre. Apto para uso adulto siguiendo indicaciones.' },
+    { id: 3, name: 'Paracetamol 500mg - Pfizer', price: 'S/.14.30', src: '/assets/paracetamol-pfizer.JPG', presentation: 'Tableta', description: 'Paracetamol elaborado por Pfizer en dosis de 500 mg. Eficaz para malestares comunes como dolor de cabeza y fiebre.' },
+    { id: 4, name: 'Paracetamol 500mg - Portugal', price: 'S/.8.50', src: '/assets/paracetamol-portugal.JPG', presentation: 'Tableta', description: 'Paracetamol 500 mg de laboratorio Portugal. Ideal para aliviar dolores leves y estados febriles.' },
+    { id: 5, name: 'Jarabe Paracetamol 100 ml - Tylenol', price: 'S/.2.50', src: '/assets/tylenol-jarabe.JPG', presentation: 'Jarabe', description: 'Jarabe de paracetamol Tylenol 100 ml, adecuado para niños según dosificación recomendada. Sabor agradable.' },
+    { id: 6, name: 'EFFERGALGAN 500 mg cápsulas', price: 'S/.10.00', src: '/assets/efferalgan.JPG', presentation: 'Cápsulas', description: 'Efferalgan 500 mg en cápsulas para alivio del dolor y la fiebre. Rápida acción y buena tolerancia.' },
+    ];
