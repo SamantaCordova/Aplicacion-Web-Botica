@@ -1,10 +1,13 @@
 import { useState, useCallback } from 'react';
-import { initialLoginState } from '../models/LoginModel';
+import { initialLoginState, authenticate } from '../models/LoginModel';
 
 export default function useLoginController() {
   const [username, setUsername] = useState(initialLoginState.username);
   const [password, setPassword] = useState(initialLoginState.password);
   const [searchTerm, setSearchTerm] = useState('');
+
+  // Para redirección
+  const [redirect, setRedirect] = useState(false);
 
   const onSubmit = useCallback(
     (e) => {
@@ -13,7 +16,11 @@ export default function useLoginController() {
         alert('Por favor, completa todos los campos');
         return;
       }
-      alert('Iniciando sesión...');
+      if (authenticate(username, password)) {
+        setRedirect(true);
+      } else {
+        alert('Usuario o contraseña incorrectos');
+      }
     },
     [username, password]
   );
@@ -36,5 +43,7 @@ export default function useLoginController() {
     setSearchTerm,
     onSubmit,
     onSearchKeyPress,
+    redirect,
+    setRedirect,
   };
 }

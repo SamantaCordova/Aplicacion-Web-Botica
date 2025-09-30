@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../../styles/ecosalud.css';
 import useLoginController from '../../controllers/LoginController';
 import MainLayout from '../layouts/MainLayout';
 
 function LoginView() {
+
   const {
     username,
     password,
@@ -13,7 +15,18 @@ function LoginView() {
     setSearchTerm,
     onSubmit,
     onSearchKeyPress,
+    redirect,
+    setRedirect,
   } = useLoginController();
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (redirect) {
+      navigate('/');
+      setRedirect(false);
+    }
+  }, [redirect, navigate, setRedirect]);
 
   return (
     <MainLayout
@@ -56,7 +69,7 @@ function LoginView() {
           </form>
           <div className="register-link">
             ¿No tienes una cuenta?<br />
-            <a href="#">Registrarte</a>
+            <a href="/register">Registrarte</a>
           </div>
         </div>
       </div>
