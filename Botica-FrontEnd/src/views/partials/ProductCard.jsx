@@ -49,7 +49,6 @@ const ProductCard = ({ product, onAddToCart }) => {
           </button>
           
           <div className="delivery-info">
-            <span className="delivery-badge">50 MIN</span>
             <span>Delivery</span>
           </div>
         </div>
