@@ -19,7 +19,7 @@ const ProductFilters = ({
   return (
     <aside className="filters-sidebar">
       <div className="filter-group">
-        <label>Palabras clave</label>
+        <label>Filtro de Búsqueda</label>
         <input
           type="text"
           placeholder="Buscar..."
