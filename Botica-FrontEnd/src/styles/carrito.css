@@ -321,3 +321,67 @@
     }
 }
 
+.formulario {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.formulario input,
+.formulario select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.accordion-item {
+  border: 1px solid #1e3a8a;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.accordion-header {
+  width: 100%;
+  background-color: #1e3a8a;
+  color: white;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.accordion-body {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion-item.activo .accordion-header {
+  background-color: #2a4bb8;
+}
+
+/* Animación de aparición suave del input de dirección */
+.direccion-input {
+  overflow: hidden;
+  transition: all 0.4s ease;
+  max-height: 0;
+  opacity: 0;
+}
+
+.direccion-input.visible {
+  max-height: 80px;
+  opacity: 1;
+  margin-top: 10px;
+  transition: all 0.4s ease;
+}
